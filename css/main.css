@@ -1,0 +1,408 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* HEADER */
+
+.header {
+    padding: 40px 0;
+    background-color: #eaeaea;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    font-size: 17px;
+    font-weight: 700;
+
+    color: #494949;
+    text-transform: uppercase;
+}
+
+.header__nav-links {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+
+    padding-left: 25px;
+    margin-right: 25px;
+}
+
+.header__nav-links::before {
+    display: block;
+    content: '';
+
+    background: #494949;
+    width: 2px;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header__nav-links:first-child::before {
+    display: none;
+}
+
+.header__nav-links:first-child {
+    padding-left: 0;
+}
+
+.header__nav-links:last-child {
+    margin-right: 0;
+}
+
+/* BANNER */
+
+.section__banner {
+    padding: 100px 0;
+    background: url("../img/banner01.png") no-repeat center;
+    background-size: cover;
+}
+
+.banner__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner__content {
+    color: #ffffff;
+}
+
+.banner__title {
+    width: 600px;
+    font-size: 50px;
+    margin-bottom: 30px;
+    
+}
+
+.banner__desc {
+    width: 570px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+
+    margin-bottom: 30px;
+}
+
+.banner__btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    padding: 15px 50px;
+    border: 2px solid #ffffff;
+}
+
+/* PROGRESS */ 
+
+.progress {
+    padding: 120px 0;
+    background-color: #eaeaea;
+}
+
+.progress__content {
+    color: #282828;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress__title {
+    font-weight: 900;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 120px;
+}
+
+.progress__title::before,
+.progress__title::after {
+    display: block;
+    content: '';
+
+    position: absolute;
+    background: url("../img/decorate.png");
+    
+    width: 102px;
+    height: 28px;
+    top: calc(50% - 14px);
+}
+
+.progress__title::before {
+    left: 0;
+}
+
+.progress__title::after {
+    right: 0;
+}
+
+.progress__desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: #959595;
+    margin-bottom: 50px;
+}
+
+.progress__nav {
+    font-size: 18px;
+    font-weight: 900;
+
+    color: #494848;
+    text-transform: uppercase;
+}
+
+a.progress__link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+
+    margin-right: 20px;
+    padding: 0 0 18px 20px
+}
+
+a.progress__link.active {
+    border-bottom: 4px solid #ee252d;
+    position: relative;
+}
+
+a.progress__link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;    
+    right: 0;
+    bottom: 0;
+    margin: 26px auto 0 auto;
+
+    display: block;
+    width: 0;
+    height: 0;
+    border: 7px solid #eaeaea;
+    border-bottom: 7px solid #ee252d;
+}
+
+.progress__link::before {
+    display: block;
+    content: '';
+
+    background: #494848;
+    width: 2px;
+    height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress__link:first-child::before {
+    display: none;
+}
+
+.progress__link:first-child {
+    padding-left: 0;
+}
+
+.progress__table {
+    width: 1170px;
+    height: 400px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .3);
+
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.progress__table-item {
+    width: 260px;
+    height: 260px;
+}
+
+.progress__table-first {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.figure-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: #282828;
+
+    margin-right: 20px;
+}
+
+.title-item {
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    line-height: 1.5;
+}
+
+.desc-item {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: 18px;
+    line-height: 24px;
+}
+
+.progress__btn {
+    display: inline-block;
+    padding: 45px 140px;
+    margin-top: 70px;
+
+    background: url("../img/btnbg.png") no-repeat center;
+    background-size: cover;
+
+    font-weight: 700;
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin-top: 70px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 40px 0;
+
+    background: url("../img/banner02.png") no-repeat center;
+    background-size: cover;
+}
+
+.footer_content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* АДАПТИВНІСТЬ */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .banner__wrapper {
+        flex-direction: column;
+    }
+
+    .progress__table {
+        width: 100%;
+        max-width: 800px;
+        height: 1000px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .header__wrapper {
+        flex-direction: column;
+    }
+
+    .header__logo {
+        margin-bottom: 30px;
+    }
+
+    .progress__title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 710px) {
+    .container {
+        max-width: 655px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .banner__title {
+        font-size: 36px;
+    }
+
+    .banner__desc {
+        font-size: 14px;
+    }
+
+    .banner__pic {
+        width: 300px;
+    }
+
+    .progress__title {
+        font-size: 24px;
+    }
+
+    .progress__title::before,
+    .progress__title::after {
+        display: none;
+    }
+
+    .progress__desc {
+        font-size: 14px;
+    }
+
+    .progress__nav {
+        font-size: 14px;
+    }
+
+    a.progress__link.active {
+        border-bottom: 0;
+    }
+
+    a.progress__link.active::before {
+        display: none;
+
+    }
+
+    .progress__btn {
+        font-size: 24px;
+        background-size: 450px;
+    }
+}
